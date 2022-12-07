@@ -1,7 +1,9 @@
-import "./App.css";
+import React, { useState, useEffect } from "react";
 import { Form, TextArea, Button } from "semantic-ui-react";
+import "./App.css";
 
 function App() {
+  const [inputText, setInputText] = useState("");
   return (
     <div className="app-wrapper">
       <div className="app-header">
@@ -14,6 +16,7 @@ function App() {
             <Form.Field
               control={TextArea}
               placeholder="Type lesson to generate questions from.."
+              onChange={(e) => setInputText(e.target.value)}
             />
 
             <select className="questions-count-select">
