@@ -1,6 +1,5 @@
 import React from "react";
-import { Form, TextArea, Button, Radio } from "semantic-ui-react";
-import "./FormContainer.css";
+import { Form, TextArea, Button } from "semantic-ui-react";
 
 export default function FormContainer({
   inputText,

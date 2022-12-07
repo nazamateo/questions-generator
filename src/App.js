@@ -21,7 +21,7 @@ function App() {
   };
 
   if (!user) return <User setUser={setUser} />;
-  if (isLoading) return <LoadingScreen />;
+
   if (error) return <ErrorPage error={error} />;
 
   return (
@@ -34,7 +34,11 @@ function App() {
           handleClick={handleClick}
         />
         <br></br>
-        <QuestionsContainer questions={questions} />
+        {isLoading ? (
+          <LoadingScreen />
+        ) : (
+          <QuestionsContainer questions={questions} />
+        )}
       </div>
     </div>
   );
