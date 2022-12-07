@@ -1,1 +1,1 @@
-export const OPENAI_KEY = "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";
+export const OPENAI_KEY = process.env.REACT_APP_VERY_PRIVATE_KEY;
