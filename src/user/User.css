@@ -1,13 +1,13 @@
-.page-container {
+.user-container {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
-.app-container {
-  width: 40vw;
-  height: 70vh;
+.user-input {
+  font-size: 2rem;
 }

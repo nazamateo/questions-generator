@@ -1,0 +1,21 @@
+.questions-wrapper {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-box {
+  width: 40vw;
+  height: fit-content;
+  border-radius: 8px;
+  color: black;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ededed;
+  white-space: pre-wrap;
+  padding-bottom: 30px;
+}

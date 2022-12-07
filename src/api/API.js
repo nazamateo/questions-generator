@@ -8,22 +8,23 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 export const getResponse = async (
-  questionsCount,
   inputText,
-  setQuestionsCount,
-  setIsLoading
+  setIsLoading,
+  setError,
+  setQuestions
 ) => {
   await openai
     .createCompletion({
       model: "text-davinci-003",
-      prompt: `list ${questionsCount} questions from '${inputText}'
-      in javascript array format assigned to Questions object`,
+      prompt: `list questions from '${inputText}'`,
       max_tokens: 256,
       temperature: 0.7,
     })
     .then((response) => {
-      console.log(response.data);
-      setQuestionsCount(response.data);
+      setQuestions(response.data.choices[0].text);
+    })
+    .catch((error) => {
+      setError(error);
     });
   setIsLoading(false);
 };
